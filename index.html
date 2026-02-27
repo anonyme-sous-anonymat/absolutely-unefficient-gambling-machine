@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tirage Aléatoire avec Probabilités</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tirage Aléatoire de Suites Numériques</h1>
+        
+        <div class="controls">
+            <label for="x-value">Nombre de chiffres (X) : <span id="x-display">6</span></label>
+            <input type="range" id="x-value" min="1" max="12" value="6">
+            <input type="number" id="x-input" min="1" max="12" value="6">
+        </div>
+        
+        <button id="draw-button">Lancer le tirage</button>
+        
+        <div class="results">
+            <h2>Suites générées :</h2>
+            <p id="suite1"></p>
+            <p id="suite2"></p>
+            <p id="result-message"></p>
+        </div>
+        
+        <div class="probabilities">
+            <h2>Probabilités :</h2>
+            <p>Probabilité théorique : <span id="theoretical-prob"></span></p>
+            <p>Probabilité dynamique (au moins une victoire en <span id="total-draws">0</span> tirages) : <span id="dynamic-prob"></span></p>
+        </div>
+        
+        <div class="balance">
+            <h2>Solde : <span id="current-balance">100</span> jetons</h2>
+        </div>
+        
+        <div class="history">
+            <h2>Historique des tirages :</h2>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
